@@ -128,7 +128,9 @@ module.exports = ${modelName};
   }
 
   pluralize(word) {
-    // Simple pluralization
+    // Simple pluralization - for production use, consider the 'pluralize' npm package
+    // This basic implementation handles common cases but may not work for irregular plurals
+    // (e.g., 'person' -> 'people', 'child' -> 'children')
     if (word.endsWith('y')) {
       return word.slice(0, -1) + 'ies';
     } else if (word.endsWith('s') || word.endsWith('x') || word.endsWith('ch') || word.endsWith('sh')) {

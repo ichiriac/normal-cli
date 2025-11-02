@@ -61,6 +61,7 @@ class SeedRunner {
 
   async runSeed(fileName) {
     const filePath = path.join(this.seedersPath, fileName);
+    // Note: Seed files should be from trusted sources only as they execute arbitrary code
     const seed = require(filePath);
 
     if (!seed.up) {
@@ -79,6 +80,7 @@ class SeedRunner {
 
   async undoSeed(fileName) {
     const filePath = path.join(this.seedersPath, fileName);
+    // Note: Seed files should be from trusted sources only as they execute arbitrary code
     const seed = require(filePath);
 
     if (!seed.down) {

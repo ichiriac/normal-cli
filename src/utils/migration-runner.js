@@ -61,6 +61,7 @@ class MigrationRunner {
 
   async runMigration(fileName) {
     const filePath = path.join(this.migrationsPath, fileName);
+    // Note: Migration files should be from trusted sources only as they execute arbitrary code
     const migration = require(filePath);
 
     if (!migration.up) {
@@ -79,6 +80,7 @@ class MigrationRunner {
 
   async undoMigration(fileName) {
     const filePath = path.join(this.migrationsPath, fileName);
+    // Note: Migration files should be from trusted sources only as they execute arbitrary code
     const migration = require(filePath);
 
     if (!migration.down) {

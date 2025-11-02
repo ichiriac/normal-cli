@@ -4,6 +4,7 @@ const path = require('path');
 /**
  * Load the Normal CLI configuration
  * Looks for .normalrc, .normalrc.json, or normal.config.js
+ * Note: .js config files allow code execution - use only trusted configuration files
  */
 async function loadConfig() {
   const cwd = process.cwd();
