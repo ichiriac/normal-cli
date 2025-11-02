@@ -8,7 +8,7 @@
     "normal": "./bin/run.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --runInBand"
   },
   "keywords": [
     "normal",
@@ -43,9 +43,14 @@
     "inquirer": "^12.10.0"
   },
   "devDependencies": {
+    "jest": "^29.0.0",
     "knex": "^3.1.0",
     "normaljs": "^1.0.4",
     "sqlite3": "^5.1.7"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/test"]
   },
   "oclif": {
     "bin": "normal-cli",
