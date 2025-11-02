@@ -16,10 +16,22 @@
     "cli",
     "migrations",
     "database",
-    "normaljs"
+    "normaljs",
+    "sql",
+    "postgresql",
+    "mysql",
+    "sqlite"
   ],
   "author": "Normal CLI Contributors",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ichiriac/normal-cli.git"
+  },
+  "homepage": "https://github.com/ichiriac/normal-cli#readme",
+  "bugs": {
+    "url": "https://github.com/ichiriac/normal-cli/issues"
+  },
   "engines": {
     "node": ">=14.0.0"
   },
